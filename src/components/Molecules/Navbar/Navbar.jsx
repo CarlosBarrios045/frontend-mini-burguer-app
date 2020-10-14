@@ -1,5 +1,4 @@
 import React from "react";
-import Router from "next/router";
 
 // Icons
 import { FiMenu } from "react-icons/fi";
@@ -74,12 +73,7 @@ const Navbar = () => {
               <TiShoppingCart />
             </IconButton>
           )}
-          <Button
-            className={classes.logOut}
-            onClick={() => Router.push("/iniciar-sesion")}
-          >
-            Cerrar Sesión
-          </Button>
+          <Button className={classes.logOut}>Cerrar Sesión</Button>
         </div>
       </Toolbar>
     </AppBar>

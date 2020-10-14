@@ -17,14 +17,7 @@ import Container from "src/components/Atoms/Container";
 // Reset Styles
 import GlobalResets from "src/theme/globalResets";
 
-import { MuiPickersUtilsProvider } from "@material-ui/pickers";
-import DateFnsUtils from "@date-io/date-fns";
-import esLocale from "date-fns/locale/es";
-
 import theme from "../theme";
-
-// API
-// import { profile } from "../api/urls";
 
 const AppWrapper = ({ Component, pageProps }) => {
   // on Mount
@@ -52,11 +45,9 @@ const AppWrapper = ({ Component, pageProps }) => {
           <CssBaseline />
           <GlobalResets />
           <ApolloConnect>
-            <MuiPickersUtilsProvider utils={DateFnsUtils} locale={esLocale}>
-              <Container>
-                <Component {...pageProps} />
-              </Container>
-            </MuiPickersUtilsProvider>
+            <Container>
+              <Component {...pageProps} />
+            </Container>
           </ApolloConnect>
         </StyledProvider>
       </ThemeProvider>

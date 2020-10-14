@@ -15,7 +15,7 @@ const Home = () => {
 
   // Get categories
   const { data } = useQuery(GET_CATEGORIES, {
-    pollInterval: 5 * 60 * 1000, // 5 minutes
+    pollInterval: 15 * 1000, // 15 seconds
   });
 
   return (
